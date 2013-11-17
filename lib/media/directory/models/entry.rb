@@ -23,6 +23,10 @@ module Media
         @id = params.fetch(:id)
       end
 
+      def lock_version
+        0
+      end
+
       def to_h
         { id: id }
       end
