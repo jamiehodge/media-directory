@@ -8,6 +8,14 @@ module Media
         set(:model)  { Models::People }
         set(:policy) { Policies::Base }
 
+        get "/authenticate" do
+          @item = self.class.model.authenticate(parameters.id, parameters.password)
+
+          return 403 unless authorize.show?
+
+          respond_with :show, locals: { item: present(id) }
+        end
+
         index
         show
       end
