@@ -10,6 +10,10 @@ module Media
 
         index
         show
+
+        def parameters
+          self.class.parameters.new(params, pattern: /[\w-]+/)
+        end
       end
     end
   end

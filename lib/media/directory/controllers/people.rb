@@ -18,6 +18,10 @@ module Media
 
         index
         show
+
+        def parameters
+          self.class.parameters.new(params, pattern: /[a-z]{3}[1-9]{3}/)
+        end
       end
     end
   end

@@ -3,9 +3,10 @@ json = collection.map {|item|
     id:           item.id,
     url:          url(item.id),
     name:         item.name,
-    title:        item.title,
-    organization: item.organization,
+    description:  item.description,
     department:   item.department,
+    organization: item.room,
+    telephone:    item.telephone,
     mail:         item.mail
   }
 }
