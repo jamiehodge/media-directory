@@ -5,15 +5,13 @@ module Media
     module Controllers
       class People < Base
 
-        set(:model)  { Models::Person }
-        set(:policy) { Policies::Base }
-
+        set(:model)   { Models::Person }
+        set(:pattern) { /[a-z]{3}[1-9]{3}/ }
+        set(:policy)  { Policies::Base }
 
         index
         show
 
-        def parameters
-          self.class.parameters.new(params, pattern: /[a-z]{3}[1-9]{3}/)
         post "/authenticate" do
           @item = self.class.model.authenticate(parameters.id, parameters.password)
 
