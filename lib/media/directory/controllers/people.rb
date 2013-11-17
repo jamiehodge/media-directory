@@ -5,7 +5,7 @@ module Media
     module Controllers
       class People < Base
 
-        set(:model)  { Models::People }
+        set(:model)  { Models::Person }
         set(:policy) { Policies::Base }
 
         get "/authenticate" do
