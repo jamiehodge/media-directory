@@ -1,0 +1,9 @@
+json = {
+  id:           item.id,
+  url:          url(item.id),
+  name:         item.name,
+  title:        item.title,
+  organization: item.organization,
+  department:   item.department,
+  mail:         item.mail
+}
