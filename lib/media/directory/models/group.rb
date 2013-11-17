@@ -10,8 +10,11 @@ module Media
         @name = attrs[:name]
       end
 
-      def self.directory
-        @directory ||= Media::LDAP::Group
+      class << self
+
+        def directory
+          @directory ||= Media::LDAP::Group
+        end
       end
 
       def to_h
