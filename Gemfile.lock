@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/itmedia/media-ldap.git
-  revision: ffc8fb0ed0dce3cb8d655ae3cdd1bbe58a0e754a
+  revision: 1b4ce5bcfeecce7650f8914a07c5166a36756d03
   specs:
     media-ldap (0.0.1)
       connection_pool
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/itmedia/media-web.git
-  revision: c75074bd431a304fb5c38ce7e95a4a417413bc64
+  revision: ad175b436f93caa5b64a4ab9d04be358be984f3d
   specs:
     media-web (0.0.1)
       puma
